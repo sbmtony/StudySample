@@ -1,5 +1,6 @@
-<?php
+﻿<?php
 require("global.php");
+// modify by zhanglei
 
 $php_file = basename(__FILE__);
 //echo PHP_FILE;

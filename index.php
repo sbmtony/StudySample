@@ -2,6 +2,8 @@
 require("global.php");
 // modify by zhanglei
 
+//加载头部
+include 'header.php';
 $php_file = basename(__FILE__);
 //echo PHP_FILE;
 
@@ -41,7 +43,7 @@ switch($method){
 		break;
 	default:
 		//加载头部
-		include 'header.php';
+		//include 'header.php';// 修改 by tony;
 		echo '<form action="'.$php_file.'?method=upload" method="POST" enctype="multipart/form-data">';
         echo 	'<label for="file">Filename:</label>';
         echo 	'<input type="file" name="file" id="file" />';
@@ -59,7 +61,10 @@ switch($method){
 			echo $txt . '<a href="'.$php_file.'?method=edit&filename='.substr($txt,9).'">编辑</a>';
 		}
 		//加载底部
-		include 'footer.php';
+		//include 'footer.php';// 修改 by tony;
 		break;
 }
+
+//加载底部
+include 'footer.php';
 ?>
